@@ -10,8 +10,10 @@ code {
 }
 
 body, html {
-  font-family: Italiana, sans-serif;
+  font-family: 'Montserrat Variable', sans-serif;
+  font-weight: 500;
 }
+
 
 @font-face {
   font-family: 'Italiana';
@@ -36,9 +38,10 @@ body, html {
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid transparent;
+  border: 1px solid black;
   padding: 8px 20px;
   background: white;
+  text-align: center;
   border-radius: 100px;
   color: black;
   font-size: 16px;
@@ -53,4 +56,91 @@ body, html {
   border: 1px solid white;
   color: white;
   transform: scale(1.05);
+}
+
+.button-booking {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  bottom: 20px;
+  width: calc(100% - 40px);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px 20px;
+  border: 1px solid #23387E;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  color: #23387E;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Montserrat Variable', sans-serif;
+  text-decoration: unset;
+}
+
+.button-maps {
+  padding: 0;
+  color: #34A853;
+  border: 1px solid black;
+}
+
+.button-insta {
+  padding: 0;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.button-booking-visible {
+  opacity: 1;
+}
+
+.button-booking-hidden {
+  opacity: 0;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 30px !important;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+}
+
+.swiper-slide img {
+  display: block;
+  height: 200px;
+  border-radius: 5px;
+  width: 100%;
+  object-fit: cover;
+}
+.swiper-pagination {
+  border-radius: 0px 0px 5px 5px;
+}
+.swiper-pagination-bullet {
+  width: 7px !important;
+  height: 7px !important;
+
+}
+.swiper-pagination-bullet-active {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+.css-1f773le-MuiButtonBase-root-MuiAccordionSummary-root {
+  padding: 0 !important;
+}
+
+
+
+.swiper-pagination {
+  bottom: 3px !important;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

@@ -1,41 +1,52 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import s from './Main.module.css'
-import video from '../../images/main_video.mov'
+
+import Header from "../Header";
+import About from "../About";
+import Hero from "../Hero";
+import Rooms from "../Rooms";
+import Contact from "../Contact";
+import Footer from "../Footer";
+
 
 const Main = () => {
-    return (
-        <div className={s.main}>
-            <div className={s.title}>Duomo tropea</div>
-            <div className={s.description}>Hotel nel cuore storico di Tropea</div>
-            <div style={{
-                width: '100%',
-                height: '100%',
-                borderRadius: 20,
-                overflow: 'hidden',
-                position: 'relative',
-            }}>
-                <video
-                    src={video}
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                    }}
-                    muted
-                    loop
-                    autoPlay
-                />
-            </div>
-            <a href="#" className="button"
-               style={{
-                   position: 'absolute',
-                   bottom: '20%',
-                   left: '50%',
-                   transform: 'translate(-50%, 0)',
-                   fontFamily: 'Montserrat Variable, sans-serif',
-            }}>Vedi disponibilità</a>
 
+    const [menuVisible, setMenuVisible] = useState(false)
+    const heroRef = useRef(null);
+    const aboutRef = useRef(null);
+    const roomsRef = useRef(null);
+    const contactRef = useRef(null);
+
+
+    useEffect(() => {
+        if (menuVisible) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    }, [menuVisible]);
+
+
+    return (
+        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff6e4'}}>
+            <Header menuVisible={menuVisible} setMenuVisible={setMenuVisible} refs={[heroRef, aboutRef, roomsRef, contactRef]}/>
+            <div ref={heroRef}>
+                <Hero refRooms={roomsRef}/>
+            </div>
+            <div className={s.content}>
+                <div ref={aboutRef}>
+                    <About/>
+                </div>
+                <div ref={roomsRef}>
+                    <Rooms/>
+                </div>
+                <div ref={contactRef}>
+                    <Contact ref={contactRef}/>
+                </div>
+                <Footer/>
+            </div>
         </div>
+
     );
 };
 
