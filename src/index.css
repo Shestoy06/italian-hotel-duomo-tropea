@@ -82,13 +82,14 @@ body, html {
 .button-maps {
   padding: 0;
   color: #34A853;
-  border: 1px solid black;
+  background-color: #fff2d5;
+  border: 1px solid transparent;
 }
 
 .button-insta {
   padding: 0;
-  border: 1px solid black;
-  background-color: white;
+  background-color: #fff2d5;
+  border: 1px solid transparent;
 }
 
 .button-booking-visible {
