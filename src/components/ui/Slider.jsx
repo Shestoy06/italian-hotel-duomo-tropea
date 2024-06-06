@@ -1,13 +1,19 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {EffectCoverflow, Pagination} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css';
+import { register } from 'swiper/element/bundle';
 
 const Slider = ({slides}) => {
+    const swiperRef = useRef(null);
+    useEffect(() => {
+        swiperRef.current.swiper.slideTo(1);
+    }, []);
     return (
         <Swiper
+            ref={swiperRef}
             effect={'coverflow'}
             grabCursor={true}
             centeredSlides={true}
@@ -27,16 +33,7 @@ const Slider = ({slides}) => {
             modules={[EffectCoverflow, Pagination]}
             className="mySwiper"
         >
-            {slides.map(slide => (
-                <SwiperSlide >
-                    <div style={{borderRadius: 5, border: '1px solid black'}}>
-                        <img src={slide.image}/>
-                    </div>
-                    <div style={{position: 'absolute', left: 20, bottom: 20, fontSize: 18, color: "white"}}>
-                        {slide.title}
-                    </div>
-                </SwiperSlide>
-            ))}
+            {slides}
         </Swiper>
     );
 };

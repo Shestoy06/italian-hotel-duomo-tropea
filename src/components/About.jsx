@@ -15,6 +15,19 @@ import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import Slider from "./ui/Slider";
 import ScrollAnimation from "react-animate-on-scroll";
 import AnimationFadeIn from "./ui/AnimationFadeIn";
+import {useMediaQuery} from "@mui/material";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+import AnimationSlide from "./ui/AnimationSlide";
 
 export const Service = ({children}) => {
     return (
@@ -26,7 +39,10 @@ export const Service = ({children}) => {
 
 const About = () => {
 
-    const slides = [
+    const isDesktop = useMediaQuery('(min-width:780px)');
+
+
+    const slidesInfo = [
         {
             image: cathedrale,
             title: 'La Chiesa Concattedrale'
@@ -41,8 +57,48 @@ const About = () => {
         },
     ]
 
+    const slides = slidesInfo.map(slide => (
+        <SwiperSlide>
+            <div style={{borderRadius: 5, border: '1px solid black'}}>
+                <img src={slide.image}/>
+            </div>
+            <div style={{position: 'absolute', left: 20, bottom: 20, fontSize: 18, color: "white"}}>
+                {slide.title}
+            </div>
+        </SwiperSlide>
+    ))
 
 
+    if (isDesktop) {
+        return (
+            <div className={s.section}>
+                <div className={s.section_content}>
+                    <span className={s.section_title}>Sull'albergo</span>
+                    <AnimationFadeIn>
+                        <div className={s.section_text}>Le Residenza Il Duomo propone camere moderne e una terrazza
+                            panoramica ben esposta. Si trova nel centro storico della città, a soli 10 metri dalla
+                            cattedrale
+                            del
+                            XII secolo di Tropea e a 5 minuti dalla spiaggia.
+                        </div>
+                    </AnimationFadeIn>
+
+                </div>
+
+
+                <div style={{width: '60%'}}>
+                    <AnimationFadeIn>
+                        <div style={{marginBottom: 0}}>
+                            <Slider slides={slides} st/>
+                        </div>
+                    </AnimationFadeIn>
+
+                </div>
+
+            </div>
+
+        )
+    }
 
     return (
         <div className={s.section}>

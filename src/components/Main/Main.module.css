@@ -3,7 +3,6 @@
 .main {
     position: relative;
     width: 100%;
-    max-width: 1000px;
     padding: 60px 20px 20px;
     box-sizing: border-box;
     display: flex;
@@ -116,7 +115,6 @@
 }
 
 .content {
-    max-width: 1000px;
     width: 100vw;
     background-color: #fff6e4;
 }
@@ -126,10 +124,43 @@
     border-bottom: 1px solid black;
 }
 
+
+@media (min-width: 780px) {
+    .main {
+        padding: 60px 40px 40px;
+
+    }
+    .section {
+        padding: 80px 40px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .section_content {
+        width: 30%;
+    }
+
+}
+
 .section_title {
     font-family: Italiana, sans-serif;
     font-size: 24px;
 }
+
+@media (min-width: 1200px) {
+    .section_title {
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+    .section_content {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .section {
+        border: none;
+    }
+}
+
+
 
 .section > div {
     margin-bottom: 20px;

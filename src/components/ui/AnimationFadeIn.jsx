@@ -5,7 +5,10 @@ import ScrollAnimation from "react-animate-on-scroll";
 const AnimationFadeIn = ({children}) => {
     return (
         <ScrollAnimation animateIn="fadeIn" animateOnce="true">
-            {children}
+            <ScrollAnimation  animateIn="fadeIn" animateOnce="true">
+                {children}
+
+            </ScrollAnimation>
         </ScrollAnimation>
     );
 };

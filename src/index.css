@@ -15,6 +15,7 @@ body, html {
 }
 
 
+
 @font-face {
   font-family: 'Italiana';
   font-style: normal;
@@ -82,13 +83,13 @@ body, html {
 .button-maps {
   padding: 0;
   color: #34A853;
-  background-color: #fff2d5;
+  background-color: white;
   border: 1px solid transparent;
 }
 
 .button-insta {
   padding: 0;
-  background-color: #fff2d5;
+  background-color: white;
   border: 1px solid transparent;
 }
 
@@ -112,12 +113,43 @@ body, html {
   height: 200px;
 }
 
+
+
 .swiper-slide img {
   display: block;
   height: 200px;
   border-radius: 5px;
   width: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 780px) {
+  .swiper-wrapper {
+    padding-top: 20px;
+  }
+  .swiper-slide img {
+    display: block;
+    height: 300px;
+    border-radius: 5px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .swiper {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-size: cover;
+    width: 500px !important;
+    height: 500px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
 }
 .swiper-pagination {
   border-radius: 0px 0px 5px 5px;
@@ -144,4 +176,9 @@ body, html {
 
 .no-scroll {
   overflow: hidden;
+}
+@media (min-width: 1200px) {
+  .instagram-media {
+    width: 600px !important;
+  }
 }
