@@ -10,13 +10,13 @@ const port = 3001; // Or any port of your choice
 app.use(cors());
 app.use(bodyParser.json());
 
-const resend = new Resend('re_6mdu9aLA_8z3cWnoQSAPvRKT3qHLuf3AT');
+//const resend = new Resend('re_6mdu9aLA_8z3cWnoQSAPvRKT3qHLuf3AT');
 
 app.get('/', function (req, res) {
     console.log(`OK`);
 });
 
-app.post('/api/emails', async (req, res) => {
+/*app.post('/api/emails', async (req, res) => {
     try {
         console.log(req.body)
         await resend.emails.send({
@@ -29,7 +29,7 @@ app.post('/api/emails', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: 'Failed to send email', details: error.message });
     }
-});
+});*/
 
 
 
