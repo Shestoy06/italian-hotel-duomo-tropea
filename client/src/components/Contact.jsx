@@ -32,10 +32,11 @@ const Contact = () => {
             // Calculate the size of the images as 30% of the container's width
             const width = containerRef.current.offsetWidth;
             if (isDesktop) {
-                setImageSize(width * 0.30);
+                setImageSize((width - 30) * 0.3333);
             } else {
                 setImageSize(width * 0.48);
             }
+            console.log(width)
 
         }
     }, );
@@ -51,7 +52,7 @@ const Contact = () => {
                             Trovaci sui social media.
                         </div>
                     </AnimationFadeIn>
-                    <div style={{display: 'flex'}}>
+                    <div style={{display: 'flex', gap: 40}}>
 
                         <div ref={containerRef} style={{display: 'flex', width: '100%'}}>
                             <div>
@@ -167,9 +168,9 @@ const Contact = () => {
                 </AnimationFadeIn>
                 <div style={isDesktop ? {display: 'flex', width: '100%'} : {}}>
                     <div style={{marginBottom: 40}}>
-                        <div ref={containerRef} style={{display: 'flex', width: '100%'}}>
+                        <div  style={{display: 'flex', width: '100%'}}>
                             <div>
-                                <div style={{display: 'flex', flexWrap: 'wrap', gap: 10, position: 'relative'}}>
+                                <div ref={containerRef} style={{display: 'flex', flexWrap: 'wrap', gap: 10, position: 'relative'}}>
                                     <img src={instPhoto1} style={{
                                         width: imageSize,
                                         height: imageSize,
