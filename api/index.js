@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const { Resend } = require('resend');
+//const { Resend } = require('resend');
 
 const app = express();
 const port = 3001; // Or any port of your choice
