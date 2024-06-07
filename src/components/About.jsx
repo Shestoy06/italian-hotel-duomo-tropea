@@ -58,7 +58,7 @@ const About = () => {
     ]
 
     const slides = slidesInfo.map(slide => (
-        <SwiperSlide>
+        <SwiperSlide style={{width: '500px !important'}} className={s.slide_gallery}>
             <div style={{borderRadius: 5, border: '1px solid black'}}>
                 <img src={slide.image}/>
             </div>
@@ -75,12 +75,12 @@ const About = () => {
                 <div className={s.section_content}>
                     <span className={s.section_title}>Sull'albergo</span>
                     <AnimationFadeIn>
-                        <div className={s.section_text}>Le Residenza Il Duomo propone camere moderne e una terrazza
+                        <div>Le Residenza Il Duomo propone camere moderne e una terrazza
                             panoramica ben esposta. Si trova nel centro storico della città, a soli 10 metri dalla
                             cattedrale
                             del
                             XII secolo di Tropea e a 5 minuti dalla spiaggia.
-                        </div>
+                        </div >
                     </AnimationFadeIn>
 
                 </div>
@@ -104,7 +104,7 @@ const About = () => {
         <div className={s.section}>
             <span className={s.section_title}>Sull'albergo</span>
             <AnimationFadeIn>
-                <div>Le Residenza Il Duomo propone camere moderne e una terrazza
+                <div style={{marginBottom: 40}}>Le Residenza Il Duomo propone camere moderne e una terrazza
                     panoramica ben esposta. Si trova nel centro storico della città, a soli 10 metri dalla cattedrale
                     del
                     XII secolo di Tropea e a 5 minuti dalla spiaggia.

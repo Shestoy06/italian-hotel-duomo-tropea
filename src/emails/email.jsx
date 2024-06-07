@@ -1,12 +1,13 @@
-const Email = () => {
-    return `
-        <html>
-        <body>
-            <h1>Hello World</h1>
-            <p>This is a test email.</p>
-        </body>
-        </html>
-    `;
-};
+const React = require('react');
+const { Html, Text } = require("@react-email/components");
+function Email({props}) {
+    return (
+        <Html lang="en">
+            <Text>Name: ${props.name}</Text>
+            <Text>Email: ${props.email}</Text>
+            <Text>Surname: ${props.surname}</Text>
+        </Html>
+    );
+}
 
-module.exports = Email;
+export default Email

@@ -9,6 +9,8 @@ import BedIcon from '@mui/icons-material/Bed';
 import PersonIcon from '@mui/icons-material/Person';
 import LandscapeIcon from '@mui/icons-material/Landscape';
 import DeckIcon from '@mui/icons-material/Deck';
+import room1 from '../images/inst/photo1716729820 (10).jpeg'
+import room2 from '../images/inst/photo1716729825 (4).jpeg'
 
 import {Service} from "./About";
 import AnimationFadeIn from "./ui/AnimationFadeIn";
@@ -19,23 +21,23 @@ const Rooms = () => {
 
     const isDesktop = useMediaQuery('(min-width:780px)');
 
-    const cardWidth = '40%'
+    const cardWidth = '20%'
     const cardHeight = 300
 
 
     return (
-        <div className={s.section} style={isDesktop && {flexDirection: 'row-reverse'}}>
+        <div className={s.section} style={isDesktop ? {flexDirection: 'row-reverse'} : {}}>
             <div className={s.section_content}>
                 <span className={s.section_title}>Camere</span>
                 <AnimationFadeIn>
-                    <div>
+                    <div className={s.section_text}>
                         Le nostre camere offrono il massimo comfort e sono dotate di tutti i servizi necessari per
                         rendere
                         il vostro soggiorno piacevole e rilassante.
                     </div>
                 </AnimationFadeIn>
                 <AnimationFadeIn>
-                    <div>
+                    <div style={{marginBottom: 40}}>
                         Ogni camera dispone di aria condizionata e di una doccia moderna.
                         Alcune camere offrono una vista spettacolare sul centro della città, sulle montagne circostanti
                         o su
@@ -49,11 +51,12 @@ const Rooms = () => {
             <div style={{width: isDesktop ? '60%' : '100%'}}>
                 <AnimationFadeIn>
                     <Swiper
-                        slidesPerView={2}
+                        slidesPerView={isDesktop ? 2 : 1}
                         spaceBetween={30}
                         pagination={{
                             clickable: true,
                         }}
+                        style={isDesktop ? {paddingRight: 30} : {}}
                         modules={[Pagination]}
                         className="mySwiper"
                     >
@@ -70,7 +73,7 @@ const Rooms = () => {
                                     <img style={{width: '100%', borderRadius: 5, border: '1px solid black'}}
                                          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/103012159.jpg?k=c6b4afc3ae0fdb8a0b55916e7b32add1e6fcdb01fde193bc3dad00f1f5395f36&o="
                                          alt=""/>
-                                    <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>Camera
+                                    <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>
                                         Matrimoniale Superior
                                     </div>
 
@@ -118,9 +121,9 @@ const Rooms = () => {
                             }}>
                                 <div style={{position: 'relative', marginBottom: 10}}>
                                     <img style={{width: '100%', borderRadius: 5, border: '1px solid black'}}
-                                         src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/43222587.jpg?k=ae28f6f8828103d5368bab7f0ff3baff296baad71f3ded5deac616c7ac956420&o=" alt=""/>
-                                    <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>Camera
-                                        Camera Matrimoniale Standard
+                                         src={room1} alt=""/>
+                                    <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>
+                                        Matrimoniale Standard
                                     </div>
 
                                 </div>
@@ -169,9 +172,9 @@ const Rooms = () => {
                             }}>
                                 <div style={{position: 'relative', marginBottom: 10}}>
                                     <img style={{width: '100%', borderRadius: 5, border: '1px solid black'}}
-                                         src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/32718702.jpg?k=ad1706bd05c51162e6c3ec688891446e7d1937d81faeccb129e6f1e8fb24e249&o=" alt=""/>
-                                    <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>Camera
-                                        Camera Tripla Standard
+                                         src={room2} alt=""/>
+                                    <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>
+                                        Tripla Standard
                                     </div>
 
                                 </div>
@@ -220,8 +223,8 @@ const Rooms = () => {
                                 <div style={{position: 'relative', marginBottom: 10}}>
                                     <img style={{width: '100%', borderRadius: 5, border: '1px solid black'}}
                                          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/43226055.jpg?k=2281ee0b57ce76b7446bf3fe22e74e51b0b3dfdbf795b98ca538de735dabc1f7&o=" alt=""/>
-                                    <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>Camera
-                                        Camera Matrimoniale con Balcone o Terrazza
+                                    <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>
+                                        Matrimoniale con Balcone o Terrazza
                                     </div>
 
                                 </div>
@@ -255,7 +258,6 @@ const Rooms = () => {
                                 </a>
                             </div>
                         </SwiperSlide>
-
                     </Swiper>
                 </AnimationFadeIn>
 

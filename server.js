@@ -3,7 +3,6 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const { Resend } = require('resend');
-const Email = require('./src/emails/email.jsx'); // Adjust the path as necessary
 
 const app = express();
 const port = 3001; // Or any port of your choice
@@ -15,11 +14,12 @@ const resend = new Resend('re_6mdu9aLA_8z3cWnoQSAPvRKT3qHLuf3AT');
 
 app.post('/api/emails', async (req, res) => {
     try {
+        console.log(req.body)
         await resend.emails.send({
-            from: 'onboarding@resend.dev',
+            from: 'dumo-tropea@resend.dev',
             to: 'andrei.silin1@gmail.com',
             subject: 'Hello World',
-            html: Email()
+            html: `<div><p>Name: ${req.body.name}</p><p>Surname: ${req.body.surname}</p><p>Email: ${req.body.email}</p></div>`
         });
         res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {

@@ -7,7 +7,6 @@ const AnimationFadeIn = ({children}) => {
         <ScrollAnimation animateIn="fadeIn" animateOnce="true">
             <ScrollAnimation  animateIn="fadeIn" animateOnce="true">
                 {children}
-
             </ScrollAnimation>
         </ScrollAnimation>
     );

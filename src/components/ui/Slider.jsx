@@ -18,10 +18,7 @@ const Slider = ({slides}) => {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={'auto'}
-            autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-            }}
+
             coverflowEffect={{
                 rotate: 50,
                 stretch: 0,

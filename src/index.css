@@ -80,6 +80,12 @@ body, html {
   text-decoration: unset;
 }
 
+.button-booking:hover {
+  transition: all 0.3s ease;
+
+  transform: scale(1.03);
+}
+
 .button-maps {
   padding: 0;
   color: #34A853;
@@ -88,10 +94,42 @@ body, html {
 }
 
 .button-insta {
-  padding: 0;
-  background-color: white;
-  border: 1px solid transparent;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid black;
+  padding: 8px 20px;
+  background: white;
+  border-radius: 100px;
+  color: black;
+  font-size: 18px;
+  align-items: center;
+  text-decoration: unset;
+  justify-content: center;
+  gap: 10px;
 }
+
+@media (max-width: 780px) {
+  .button-insta {
+    font-size: 16px;
+    padding: 8px 0 !important;
+
+  }
+}
+
+.button-insta:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+}
+.button-gallery {
+  transform: translate(-50%, 0%)
+}
+
+.button-gallery:hover {
+  transition: all 0.3s ease;
+  transform: translate(-50%, 0%) scale(1.05);
+}
+
 
 .button-booking-visible {
   opacity: 1;
@@ -142,8 +180,19 @@ body, html {
 
   .swiper-slide {
     background-size: cover;
-    width: 500px !important;
     height: 500px;
+  }
+
+  .swiper-slide:nth-child(1) {
+    width: 500px;
+  }
+
+  .swiper-slide:nth-child(2) {
+    width: 500px;
+  }
+
+  .swiper-slide:nth-child(3) {
+    width: 500px;
   }
 
   .swiper-slide img {
@@ -151,6 +200,7 @@ body, html {
     width: 100%;
   }
 }
+
 .swiper-pagination {
   border-radius: 0px 0px 5px 5px;
 }
@@ -166,6 +216,10 @@ body, html {
 
 .css-1f773le-MuiButtonBase-root-MuiAccordionSummary-root {
   padding: 0 !important;
+}
+
+.input {
+  border-radius: 20px;
 }
 
 

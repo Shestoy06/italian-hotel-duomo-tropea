@@ -9,6 +9,7 @@ import Contact from "../Contact";
 import Footer from "../Footer";
 import {useMediaQuery} from "@mui/material";
 import { useInView } from "react-intersection-observer";
+import {Toaster} from "react-hot-toast";
 
 
 const Main = () => {
@@ -56,6 +57,7 @@ const Main = () => {
 
 
                 <div className={s.content}>
+                    <div><Toaster/></div>
                     <div ref={aboutRef}>
                         <About/>
                     </div>
@@ -86,6 +88,7 @@ const Main = () => {
                 <Hero refRooms={roomsRef}/>
             </div>
             <div className={s.content}>
+                <div><Toaster/></div>
                 <div ref={aboutRef}>
                     <About/>
                 </div>
