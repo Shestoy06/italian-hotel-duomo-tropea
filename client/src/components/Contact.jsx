@@ -270,7 +270,7 @@ export const ContactUs = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3001/api/emails', {
+            const response = await fetch('https://hotel-duomo-tropea.vercel.app/api/emails', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
