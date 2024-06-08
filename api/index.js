@@ -21,7 +21,7 @@ app.post('/api/emails', async (req, res) => {
         console.log(req.body)
         await resend.emails.send({
             from: 'dumo-tropea@resend.dev',
-            to: 'info@villaanticatropea.it',
+            to: 'thegreatgatsby456@gmail.com',
             subject: 'Hello World',
             html: `<div><p>Name: ${req.body.name}</p><p>Surname: ${req.body.surname}</p><p>Email: ${req.body.email}</p></div>`
         });
