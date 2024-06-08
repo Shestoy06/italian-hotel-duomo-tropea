@@ -54,7 +54,7 @@ const Contact = () => {
                     </AnimationFadeIn>
                     <div style={{display: 'flex', gap: 40}}>
 
-                        <div ref={containerRef} style={{display: 'flex', width: '100%'}}>
+                        <div ref={containerRef} style={{display: 'flex', width: '100%', }}>
                             <div>
                                 <div style={{display: 'flex', flexWrap: 'wrap', gap: 10, position: 'relative'}}>
                                     <a href="https://www.instagram.com/p/C7PGHE4IdIy/?igsh=aXg5YzkxNnFwdm00">

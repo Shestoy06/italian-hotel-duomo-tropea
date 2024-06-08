@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import {EffectCoverflow, Pagination} from "swiper/modules";
+import {EffectCoverflow, Pagination, Mousewheel} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -18,6 +18,10 @@ const Slider = ({slides}) => {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={'auto'}
+            mousewheel={{
+                forceToAxis: true, // Only consider the axis of the scroll (X or Y)
+                releaseOnEdges: true, // Release Swiper from edge when wheel scroll is ending
+            }}
 
             coverflowEffect={{
                 rotate: 50,
@@ -27,7 +31,7 @@ const Slider = ({slides}) => {
                 slideShadows: true,
             }}
             pagination={true}
-            modules={[EffectCoverflow, Pagination]}
+            modules={[EffectCoverflow, Pagination, Mousewheel]}
             className="mySwiper"
         >
             {slides}

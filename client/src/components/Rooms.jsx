@@ -1,6 +1,6 @@
 import React from 'react';
 import s from "./Main/Main.module.css";
-import {EffectCube, Pagination} from "swiper/modules";
+import {EffectCube, Pagination, Navigation, Mousewheel} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
@@ -48,16 +48,21 @@ const Rooms = () => {
                 </AnimationFadeIn>
             </div>
 
-            <div style={{width: isDesktop ? '60%' : '100%'}}>
+            <div style={{width: isDesktop ? '60%' : '100%', cursor: 'grab'}}>
                 <AnimationFadeIn>
                     <Swiper
+                        navigation={true}
                         slidesPerView={isDesktop ? 2 : 1}
                         spaceBetween={30}
+                        mousewheel={{
+                            forceToAxis: true, // Only consider the axis of the scroll (X or Y)
+                            releaseOnEdges: true, // Release Swiper from edge when wheel scroll is ending
+                        }}
                         pagination={{
                             clickable: true,
                         }}
                         style={isDesktop ? {paddingRight: 30} : {}}
-                        modules={[Pagination]}
+                        modules={[Pagination, Mousewheel, Navigation]}
                         className="mySwiper"
                     >
                         <SwiperSlide>
