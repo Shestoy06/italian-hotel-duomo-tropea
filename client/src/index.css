@@ -142,6 +142,13 @@ body, html {
 .swiper {
   width: 100%;
   padding-bottom: 30px !important;
+  cursor: grab;
+  overscroll-behavior: none;
+
+  -webkit-user-select: none; /* Chrome, Safari, Opera */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 .swiper-slide {
@@ -183,22 +190,19 @@ body, html {
     height: 500px;
   }
 
-  .swiper-slide:nth-child(1) {
-    width: 500px;
-  }
-
-  .swiper-slide:nth-child(2) {
-    width: 500px;
-  }
-
-  .swiper-slide:nth-child(3) {
-    width: 500px;
-  }
-
   .swiper-slide img {
     display: block;
     width: 100%;
   }
+
+  .swiper-slide video {
+    display: block;
+    width: 100%;
+  }
+}
+
+.slide_gallery {
+  width: 500px !important;
 }
 
 .swiper-pagination {

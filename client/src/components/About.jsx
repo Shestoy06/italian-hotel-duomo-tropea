@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import s from "./Main/Main.module.css";
 import cathedrale from "../images/cathedrale_tropea.jpeg";
 import cityCenter from "../images/city_center_tropea.jpeg";
 import beachTropea from "../images/beach_tropea.JPG";
+import photo1 from '../images/photo1.jpg';
+import photo2 from '../images/photo2.jpg';
+import photo3 from '../images/photo3.jpg';
+import photo4 from '../images/photo4.JPG';
 
 // Icons for grid of services
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -37,10 +41,11 @@ export const Service = ({children}) => {
     )
 }
 
+
+
 const About = () => {
 
     const isDesktop = useMediaQuery('(min-width:780px)');
-
 
     const slidesInfo = [
         {
@@ -55,18 +60,33 @@ const About = () => {
             image: beachTropea,
             title: 'Spiaggia'
         },
+        {
+            image: photo1,
+            title: 'Duomo, centro storico'
+        },
+        {
+            image: photo2,
+            title: 'Affaccio del Corso, punto di osservazione Tropea'
+        },
+        {
+            image: photo3,
+            title: 'Vardanello'
+        },
+        {
+            image: photo4,
+            title: 'Your best sunshine!'
+        },
     ]
 
     const slides = slidesInfo.map(slide => (
-        <SwiperSlide style={{width: '500px !important'}} className={s.slide_gallery}>
+        <SwiperSlide style={{width: '500px !important'}} className="slide_gallery">
             <div style={{borderRadius: 5, border: '1px solid black'}}>
                 <img src={slide.image}/>
             </div>
             <div style={{position: 'absolute', left: 20, bottom: 20, fontSize: 18, color: "white"}}>
                 {slide.title}
             </div>
-        </SwiperSlide>
-    ))
+        </SwiperSlide>))
 
 
     if (isDesktop) {

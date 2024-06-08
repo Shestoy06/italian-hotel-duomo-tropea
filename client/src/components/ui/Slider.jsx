@@ -11,6 +11,8 @@ const Slider = ({slides}) => {
     useEffect(() => {
         swiperRef.current.swiper.slideTo(1);
     }, []);
+
+
     return (
         <Swiper
             ref={swiperRef}
@@ -18,18 +20,8 @@ const Slider = ({slides}) => {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={'auto'}
-            mousewheel={{
-                forceToAxis: true, // Only consider the axis of the scroll (X or Y)
-                releaseOnEdges: true, // Release Swiper from edge when wheel scroll is ending
-            }}
+            mousewheel={{ forceToAxis: true }}
 
-            coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            }}
             pagination={true}
             modules={[EffectCoverflow, Pagination, Mousewheel]}
             className="mySwiper"

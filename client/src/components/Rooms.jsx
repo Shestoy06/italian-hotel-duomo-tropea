@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import s from "./Main/Main.module.css";
-import {EffectCube, Pagination, Navigation, Mousewheel} from "swiper/modules";
+import {EffectCube, Pagination, Mousewheel} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
@@ -9,12 +9,14 @@ import BedIcon from '@mui/icons-material/Bed';
 import PersonIcon from '@mui/icons-material/Person';
 import LandscapeIcon from '@mui/icons-material/Landscape';
 import DeckIcon from '@mui/icons-material/Deck';
-import room1 from '../images/inst/photo1716729820 (10).jpeg'
-import room2 from '../images/inst/photo1716729825 (4).jpeg'
-
+import room1 from '../images/inst/photo1716729820 (10).jpeg';
+import room2 from '../images/inst/photo1716729825 (4).jpeg';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import {Service} from "./About";
 import AnimationFadeIn from "./ui/AnimationFadeIn";
 import {useMediaQuery} from "@mui/material";
+
 
 
 const Rooms = () => {
@@ -23,6 +25,39 @@ const Rooms = () => {
 
     const cardWidth = '20%'
     const cardHeight = 300
+
+
+    const swiperRef = useRef(null);
+
+    useEffect(() => {
+        const handleWheel = (e) => {
+            if (e.deltaY !== 0) {
+                e.preventDefault();
+            }
+        };
+
+        const swiperContainer = document.querySelector('.mySwiper');
+        swiperContainer.addEventListener('wheel', handleWheel);
+
+        return () => {
+            swiperContainer.removeEventListener('wheel', handleWheel);
+        };
+    }, []);
+
+    const nextSlide = () => {
+        const swiper = swiperRef.current.swiper
+        if (swiper.activeIndex !== 4) {
+            swiper.slideTo(swiper.activeIndex + 1);
+        }
+    }
+
+    const prevSlide = () => {
+
+        const swiper = swiperRef.current.swiper
+        if (swiper.activeIndex !== 0) {
+            swiper.slideTo(swiper.activeIndex - 1);
+        }
+    }
 
 
     return (
@@ -48,21 +83,50 @@ const Rooms = () => {
                 </AnimationFadeIn>
             </div>
 
-            <div style={{width: isDesktop ? '60%' : '100%', cursor: 'grab'}}>
+            <div style={{width: isDesktop ? '60%' : '100%'}}>
                 <AnimationFadeIn>
+                    {isDesktop &&
+                        <div style={{display: 'flex', gap: 20, justifyContent: 'flex-start'}}>
+                            <div onClick={prevSlide} className={`${s.rooms_gallery_arrow}`} style={{
+                                cursor: 'pointer',
+                                padding: 10,
+                                borderRadius: '50%',
+                                border: '1px solid black',
+                                height: 22
+                            }}>
+                                <div style={{position: 'relative', bottom: 1, left: 5}}>
+                                    <ArrowBackIosIcon/>
+                                </div>
+                            </div>
+                            <div onClick={nextSlide}
+                                 className={s.rooms_gallery_arrow}
+                                 style={{
+                                     cursor: 'pointer',
+                                     padding: 10,
+                                     transform: 'rotate(180deg)',
+                                     borderRadius: '50%',
+                                     border: '1px solid black',
+                                     height: 22
+                                 }}>
+                                <div style={{position: 'relative', bottom: 1, left: 5}}>
+                                    <ArrowBackIosIcon/>
+                                </div>
+                            </div>
+
+                        </div>}
+
                     <Swiper
-                        navigation={true}
+                        ref={swiperRef}
                         slidesPerView={isDesktop ? 2 : 1}
                         spaceBetween={30}
                         mousewheel={{
                             forceToAxis: true, // Only consider the axis of the scroll (X or Y)
-                            releaseOnEdges: true, // Release Swiper from edge when wheel scroll is ending
                         }}
                         pagination={{
                             clickable: true,
                         }}
                         style={isDesktop ? {paddingRight: 30} : {}}
-                        modules={[Pagination, Mousewheel, Navigation]}
+                        modules={[Pagination, Mousewheel]}
                         className="mySwiper"
                     >
                         <SwiperSlide>
