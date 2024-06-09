@@ -4,7 +4,6 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css';
-import { register } from 'swiper/element/bundle';
 
 const Slider = ({slides}) => {
     const swiperRef = useRef(null);

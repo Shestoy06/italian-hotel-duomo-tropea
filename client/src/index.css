@@ -199,11 +199,12 @@ body, html {
     display: block;
     width: 100%;
   }
+  .slide_gallery {
+    width: 500px !important;
+  }
 }
 
-.slide_gallery {
-  width: 500px !important;
-}
+
 
 .swiper-pagination {
   border-radius: 0px 0px 5px 5px;
