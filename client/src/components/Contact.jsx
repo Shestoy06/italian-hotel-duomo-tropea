@@ -246,7 +246,7 @@ const Contact = () => {
                                   className={s.section_title}>Contact</span>
                             <AnimationFadeIn>
                                 <div style={{marginBottom: 20}}>
-                                    Lascia la tua email per restare aggiornato su tutte le ultime novità.
+                                    Lascia la tua email per restare aggiornato su tutte le ultime novità e ottieni uno sconto del 5% sulla prenotazione.
                                 </div>
                             </AnimationFadeIn>
                             <ContactUs/>
