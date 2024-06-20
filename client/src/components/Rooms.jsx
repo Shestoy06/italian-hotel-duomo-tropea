@@ -63,7 +63,7 @@ const Rooms = () => {
     return (
         <div className={s.section} style={isDesktop ? {flexDirection: 'row-reverse'} : {}}>
             <div className={s.section_content}>
-                <span className={s.section_title}>Camere</span>
+                <h2 className={s.section_title}>Camere</h2>
                 <AnimationFadeIn>
                     <div className={s.section_text}>
                         Le nostre camere offrono il massimo comfort e sono dotate di tutti i servizi necessari per

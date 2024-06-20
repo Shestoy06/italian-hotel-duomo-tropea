@@ -241,3 +241,7 @@ body, html {
     width: 600px !important;
   }
 }
+
+h2 {
+  margin-top: 0 !important;
+}

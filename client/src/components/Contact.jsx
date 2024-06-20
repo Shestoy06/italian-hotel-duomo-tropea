@@ -46,7 +46,7 @@ const Contact = () => {
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
                 <div className={s.section}
                      style={{border: 'none', marginBottom: 40, flexDirection: 'column', paddingTop: 20, width: '100%'}}>
-                    <span className={s.section_title}>Media</span>
+                    <h2 className={s.section_title}>Media</h2>
                     <AnimationFadeIn>
                         <div className={s.section_content}>
                             Trovaci sui social media.
@@ -139,11 +139,12 @@ const Contact = () => {
                                 borderRadius: 20,
                                 backgroundColor: 'rgba(253,237,205,0.5)'
                             }}>
-                                <span style={{alignSelf: 'flex-start', marginBottom: 20}}
-                                      className={s.section_title}>Contact</span>
+                                <h2 style={{alignSelf: 'flex-start', marginBottom: 20}}
+                                      className={s.section_title}>Contact</h2>
                                 <AnimationFadeIn>
                                     <div style={{marginBottom: 20}}>
-                                        Lascia la tua email per restare aggiornato su tutte le ultime novità.
+                                        Lascia la tua email per restare aggiornato su tutte le ultime novità e ottieni uno sconto del 5% sulla prenotazione.
+
                                     </div>
                                 </AnimationFadeIn>
                                 <ContactUs/>
@@ -160,7 +161,7 @@ const Contact = () => {
     return (
         <div>
             <div className={s.section} style={{border: 'none', marginBottom: 40, flexDirection: 'column'}}>
-                <span className={s.section_title}>Media</span>
+                <h2 className={s.section_title}>Media</h2>
                 <AnimationFadeIn>
                     <div style={{marginBottom: 20}} >
                         Trovaci sui social media.
@@ -242,8 +243,8 @@ const Contact = () => {
                             borderRadius: 20,
                             backgroundColor: 'rgba(253,237,205,0.5)'
                         }}>
-                            <span style={{alignSelf: 'flex-start', marginBottom: 20}}
-                                  className={s.section_title}>Contact</span>
+                            <h2 style={{alignSelf: 'flex-start', marginBottom: 20}}
+                                  className={s.section_title}>Contact</h2>
                             <AnimationFadeIn>
                                 <div style={{marginBottom: 20}}>
                                     Lascia la tua email per restare aggiornato su tutte le ultime novità e ottieni uno sconto del 5% sulla prenotazione.

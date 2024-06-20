@@ -93,7 +93,7 @@ const About = () => {
         return (
             <div className={s.section}>
                 <div className={s.section_content}>
-                    <span className={s.section_title}>Sull'albergo</span>
+                    <div className={s.section_title}>Sull'albergo</div>
                     <AnimationFadeIn>
                         <div>Le Residenza Il Duomo propone camere moderne e una terrazza
                             panoramica ben esposta. Si trova nel centro storico della città, a soli 10 metri dalla
@@ -122,7 +122,7 @@ const About = () => {
 
     return (
         <div className={s.section}>
-            <span className={s.section_title}>Sull'albergo</span>
+            <h2 className={s.section_title}>Sull'albergo</h2>
             <AnimationFadeIn>
                 <div style={{marginBottom: 40}}>Le Residenza Il Duomo propone camere moderne e una terrazza
                     panoramica ben esposta. Si trova nel centro storico della città, a soli 10 metri dalla cattedrale
