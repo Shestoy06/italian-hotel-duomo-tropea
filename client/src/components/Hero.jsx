@@ -68,7 +68,6 @@ const Hero = ({refRooms}) => {
                         height: '100%',
                         objectFit: 'cover',
                     }}
-                    poster={videoPoster}
                     muted
                     loop
                     autoPlay
