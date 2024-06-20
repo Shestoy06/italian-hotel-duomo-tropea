@@ -5,6 +5,7 @@ import useViewportHeight from "../hooks/useViewportHeight";
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css"
 import cathedrale from "../images/cathedrale_tropea.jpeg";
+import videoPoster from "../images/video_poster.png";
 import {scrollToRef} from "./Header";
 import {useMediaQuery} from "@mui/material";
 
@@ -67,6 +68,7 @@ const Hero = ({refRooms}) => {
                         height: '100%',
                         objectFit: 'cover',
                     }}
+                    poster={videoPoster}
                     muted
                     loop
                     autoPlay
