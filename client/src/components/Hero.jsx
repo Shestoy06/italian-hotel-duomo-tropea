@@ -14,7 +14,7 @@ const Hero = ({refRooms}) => {
     if(isDesktop) {
         return (
             <div className={s.main} style={{height: fullHeight, transition: '.1s all ease'}}>
-                <div className={s.title}>Duomo Tropea</div>
+                <h1 className={s.title}>Duomo Tropea</h1>
                 <div className={s.description}>Hotel nel cuore storico di Tropea</div>
                 <div style={{
                     width: '100%',

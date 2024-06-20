@@ -78,7 +78,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 64px;
+    font-size: 64px !important;
     z-index: 100;
     padding: 0 20px 10px;
     color: white;
@@ -87,7 +87,8 @@
     background: rgb(255,242,215, 0.1);
 
     border-radius: 10px;
-    font-family: Italiana, sans-serif;
+    font-weight: 400 !important;
+    font-family: Italiana, sans-serif !important;
     border: 1px solid rgb(255,242,215, 0.5);
 
     animation: titleAnimation 2s  ease;
