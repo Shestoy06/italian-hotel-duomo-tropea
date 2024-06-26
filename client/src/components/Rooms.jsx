@@ -140,8 +140,9 @@ const Rooms = () => {
                             }}>
                                 <div style={{position: 'relative', marginBottom: 10}}>
                                     <img style={{width: '100%', borderRadius: 5, border: '1px solid black'}}
+                                         loading={'lazy'}
                                          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/103012159.jpg?k=c6b4afc3ae0fdb8a0b55916e7b32add1e6fcdb01fde193bc3dad00f1f5395f36&o="
-                                         alt=""/>
+                                         alt="room image"/>
                                     <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>
                                         Matrimoniale Superior
                                     </div>
@@ -174,7 +175,7 @@ const Rooms = () => {
                                    className={`button-booking`}>
                                     Prenota su Booking
                                     <img src="https://seekvectors.com/files/download/booking.com-logo.png"
-                                         style={{height: 20, width: 20}} alt=""/>
+                                         style={{height: 20, width: 20}} alt="booking icon"/>
                                 </a>
                             </div>
                         </SwiperSlide>
@@ -190,7 +191,8 @@ const Rooms = () => {
                             }}>
                                 <div style={{position: 'relative', marginBottom: 10}}>
                                     <img style={{width: '100%', borderRadius: 5, border: '1px solid black'}}
-                                         src={room1} alt=""/>
+                                         loading={'lazy'}
+                                         src={room1} alt="room image"/>
                                     <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>
                                         Matrimoniale Standard
                                     </div>
@@ -225,7 +227,7 @@ const Rooms = () => {
                                    className={`button-booking`}>
                                     Prenota su Booking
                                     <img src="https://seekvectors.com/files/download/booking.com-logo.png"
-                                         style={{height: 20, width: 20}} alt=""/>
+                                         style={{height: 20, width: 20}} alt="booking icon"/>
                                 </a>
                             </div>
                         </SwiperSlide>
@@ -241,7 +243,8 @@ const Rooms = () => {
                             }}>
                                 <div style={{position: 'relative', marginBottom: 10}}>
                                     <img style={{width: '100%', borderRadius: 5, border: '1px solid black'}}
-                                         src={room2} alt=""/>
+                                         loading={'lazy'}
+                                         src={room2} alt="room image"/>
                                     <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>
                                         Tripla Standard
                                     </div>
@@ -275,7 +278,7 @@ const Rooms = () => {
                                    className={`button-booking`}>
                                     Prenota su Booking
                                     <img src="https://seekvectors.com/files/download/booking.com-logo.png"
-                                         style={{height: 20, width: 20}} alt=""/>
+                                         style={{height: 20, width: 20}} alt="booking icon"/>
                                 </a>
                             </div>
                         </SwiperSlide>
@@ -291,7 +294,8 @@ const Rooms = () => {
                             }}>
                                 <div style={{position: 'relative', marginBottom: 10}}>
                                     <img style={{width: '100%', borderRadius: 5, border: '1px solid black'}}
-                                         src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/43226055.jpg?k=2281ee0b57ce76b7446bf3fe22e74e51b0b3dfdbf795b98ca538de735dabc1f7&o=" alt=""/>
+                                         loading={'lazy'}
+                                         src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/43226055.jpg?k=2281ee0b57ce76b7446bf3fe22e74e51b0b3dfdbf795b98ca538de735dabc1f7&o=" alt="room image"/>
                                     <div style={{position: 'absolute', left: 20, bottom: 10, color: 'white'}}>
                                         Matrimoniale con Balcone o Terrazza
                                     </div>
@@ -323,7 +327,7 @@ const Rooms = () => {
                                    className={`button-booking`}>
                                     Prenota su Booking
                                     <img src="https://seekvectors.com/files/download/booking.com-logo.png"
-                                         style={{height: 20, width: 20}} alt=""/>
+                                         style={{height: 20, width: 20}} alt="booking icon"/>
                                 </a>
                             </div>
                         </SwiperSlide>

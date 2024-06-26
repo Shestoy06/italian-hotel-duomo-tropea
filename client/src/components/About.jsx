@@ -81,7 +81,7 @@ const About = () => {
     const slides = slidesInfo.map(slide => (
         <SwiperSlide style={{width: '500px !important'}} className="slide_gallery">
             <div style={{borderRadius: 5, border: '1px solid black'}}>
-                <img src={slide.image}/>
+                <img src={slide.image} loading={"lazy"}/>
             </div>
             <div style={{position: 'absolute', left: 20, bottom: 20, fontSize: 18, color: "white"}}>
                 {slide.title}
